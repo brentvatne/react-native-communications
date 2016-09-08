@@ -155,13 +155,13 @@ const communication = {
 };
 
 const LaunchURL = (url) => {
-	Linking.canOpenURL(url).then(supported => {
-		if(!supported) {
-			console.log('Can\'t handle url: ' + url);
-		} else {
+	// Linking.canOpenURL(url).then(supported => {
+	// 	if(!supported) {
+	// 		console.log('Can\'t handle url: ' + url);
+	// 	} else {
 			return Linking.openURL(url);
-		}
-	}).catch(err => console.error('An unexpected error happened', err));
+	// 	}
+	// }).catch(err => console.error('An unexpected error happened', err));
 };
 
 const getValidArgumentsFromArray = (array, type) => {
